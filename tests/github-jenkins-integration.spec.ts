@@ -6,3 +6,10 @@ test("has title", async ({ page }) => {
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
 });
+
+test("get title", async ({ page }) => {
+  await page.goto("https://www.google.com/");
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle("Google");
+});
