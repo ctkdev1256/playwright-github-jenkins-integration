@@ -13,3 +13,10 @@ test("get title", async ({ page }) => {
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle("Google");
 });
+
+test("get title of page", async ({ page }) => {
+  await page.goto("https://www.google.com/");
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle("GoogleDo");
+});
